@@ -12,9 +12,89 @@
 </head>
 <body>
     <form>
-        <div class="container">
-            <p class="text-center">hello</p>
-
+        <div class="container mt-5">
+            <div class="border rounded">
+                <div class="border border-bottom bg-secondary-subtle">
+                    <h1 class="text-start fw-bold p-2">Payment form example</h1>
+                </div>
+                <!-- div del Body -->
+                <div class="">
+                    <div class="border">
+                        <div class="border rounded m-2">
+                            <p class="p-3 mb-2 bg-danger-subtle text-danger-emphasis fw-bold fs-5"> Some fields are missing </p>
+                        </div>
+                        <!-- div with display:flex - datos de la tarjeta  -->
+                        <div class="row m-1">
+                            <fieldset class="col-4">
+                                <label class="p-2 fs-4">Card #</label>                            
+                                <input class="form-control" type="text" name="CardNumber" id="CardNumber" placeholder="XXXXXXXXXXXXXXXX">
+                            </fieldset>
+                            <fieldset class="col-2">
+                                <label class="fw-bold p-2 fs-4">CVC #</label>                                
+                                <input class="form-control" type="text" name="CardNumber" id="CardNumber" placeholder="0000">
+                            </fieldset>
+                            <fieldset class="col-3">
+                                <label class="fw-bold p-2 fs-4">Amount</label>
+                                <br>
+                                <label class="fw-bold p-2 fs-4">$</label>                                                             
+                                <input class="form-control" type="text" name="CardNumber" id="CardNumber" placeholder="Amount">
+                            </fieldset>                    
+                        </div>
+                    </div>
+                    <!-- div with display:flex - datos del dueno de la tarjeta -->
+                    <div class="row m-1">
+                        <div class="col-6"> 
+                            <fieldset class="">
+                                <h5 class="fw-bold">First Name</h5>
+                                <input class="form-control" type="text" name="firstName" id="firstName">
+                            </fieldset>
+                            <fieldset class="">
+                                <h5 class="fw-bold">City</h5>
+                                <input class="form-control" type="text" name="City" id="City">
+                            </fieldset>
+                            <fieldset>
+                                <label class="fw-bold p-2">We accept:</label>
+                                <div class="border rounded bg-secondary col-5">
+                                    <input type="radio" name="card_pay" id="card_pay" value="master">master
+                                    <input type="radio" name="card_pay" id="card_pay" value="visa">visa
+                                    <input type="radio" name="card_pay" id="card_pay" value="dinner">dinner
+                                    <input type="radio" name="card_pay" id="card_pay" value="american">american
+                                </div>                               
+                            </fieldset>
+                        </div>    
+                        <div class="col-6"> 
+                            <fieldset class="">
+                                <h5 class="fw-bold">Last Name</h5>
+                                <input class="form-control" type="text" name="lastName" id="lastName">
+                            </fieldset>
+                            <div class="row">
+                                <fieldset class="col-3">
+                                    <h5 class="fw-bold">State</h5>
+                                    <input class="form-control" type="text" name="state" id="state">
+                                </fieldset>
+                                <fieldset class="col-3">
+                                    <h5 class="fw-bold">Postal Code</h5>
+                                    <input class="form-control" type="text" name="postal-Code" id="postal-Code">
+                                </fieldset>
+                            </div>
+                            
+                            <fieldset class="">
+                                <h5 class="fw-bold">Message</h5>
+                                <input class="form-control" type="text" name="typeCard" id="typeCard">
+                            </fieldset>
+                        </div>                
+                    </div>
+                    <!-- div with display:flex, para los botones -->
+                    <div class="border border-top">
+                        <div class="row justify-content-end py-3">
+                            <div class="col-2 text-end me-4">
+                                <button type="button" class="btn btn-secondary me-1 fw-bold">Cancel</button>
+                                <button type="button" class="btn btn-primary fw-bold">Send</button>
+                            </div>                
+                        </div>  
+                    </div>
+               </div>
+            </div>                
         </div>
     </form>
     
