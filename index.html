@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <!-- div with display:flex - datos del dueno de la tarjeta -->
-                    <div class="row ms-1 me-1">
+                    <div class="row ms-1 me-2">
                         <div class="col-6"> 
                             <fieldset class="">
                                 <label class="fw-bold p-2 fs-4">First Name</label>
@@ -75,18 +75,11 @@
                             <div class="row">
                                 <fieldset class="col-6">
                                     <label class="fw-bold p-2 fs-4">State</label>
-                                    <select class="form-control  p-2" name="state" id="state">
-                                        <option>Pick a state</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>                                
-                                    </select>   
+                                    <input class="form-control p-2" type="number" name="state" id="state" min="1" max="5" placeholder="Pick a state"> 
                                 </fieldset>
                                 <fieldset class="col-6">
                                     <label class="fw-bold p-2 fs-4">Postal Code</label>
-                                    <input class="form-control" type="text" name="postal-Code" id="postal-Code">
+                                    <input class="form-control p-2" type="text" name="postal-Code" id="postal-Code">
                                 </fieldset>
                             </div>
                             <fieldset>
