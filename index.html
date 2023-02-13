@@ -12,84 +12,94 @@
 </head>
 <body>
     <form>
-        <div class="container mt-5">
+        <div class="container mt-5 mb-5">
             <div class="border rounded">
                 <div class="border border-bottom bg-secondary-subtle">
-                    <h1 class="text-start fw-bold p-2">Payment form example</h1>
-                </div>
-                <!-- div del Body -->
-                <div class="">
-                    <div class="border">
-                        <div class="border rounded m-2">
-                            <p class="p-3 mb-2 bg-danger-subtle text-danger-emphasis fw-bold fs-5"> Some fields are missing </p>
+                    <h1 class="text-start fw-bold p-2 fs-1">Payment form example</h1>
+                </div>                
+                <div>
+                    <!-- div del Body -->
+                    <div class="">
+                        <div class="border border-danger-subtle bg-danger-subtle border-opacity-20 rounded m-4">
+                            <p class="p-3 mb-2 text-danger-emphasis fw-bold fs-4"> Some fields are missing </p>
                         </div>
                         <!-- div with display:flex - datos de la tarjeta  -->
                         <div class="row m-1">
                             <fieldset class="col-4">
-                                <label class="p-2 fs-4">Card #</label>                            
-                                <input class="form-control" type="text" name="CardNumber" id="CardNumber" placeholder="XXXXXXXXXXXXXXXX">
+                                <label class="fw-bold p-2 fs-4">Card #</label>                            
+                                <input class="form-control p-2" type="text" name="CardNumber" id="CardNumber" placeholder="XXXXXXXXXXXXXXXX">
                             </fieldset>
                             <fieldset class="col-2">
                                 <label class="fw-bold p-2 fs-4">CVC #</label>                                
-                                <input class="form-control" type="text" name="CardNumber" id="CardNumber" placeholder="0000">
+                                <input class="form-control p-2" type="text" name="CardNumber" id="CardNumber" placeholder="0000">
                             </fieldset>
                             <fieldset class="col-3">
                                 <label class="fw-bold p-2 fs-4">Amount</label>
-                                <br>
-                                <label class="fw-bold p-2 fs-4">$</label>                                                             
-                                <input class="form-control" type="text" name="CardNumber" id="CardNumber" placeholder="Amount">
+                                <div class="input-group">
+                                    <label class="fw-bold fs-4">$ </label>                                               
+                                    <input class="form-control border rounded p-2 ms-1" type="text" name="CardNumber" id="CardNumber" placeholder="Amount"> 
+                                </div>                                                           
                             </fieldset>                    
                         </div>
                     </div>
                     <!-- div with display:flex - datos del dueno de la tarjeta -->
-                    <div class="row m-1">
+                    <div class="row ms-1 me-1">
                         <div class="col-6"> 
                             <fieldset class="">
-                                <h5 class="fw-bold">First Name</h5>
-                                <input class="form-control" type="text" name="firstName" id="firstName">
+                                <label class="fw-bold p-2 fs-4">First Name</label>
+                                <input class="form-control p-2" type="text" name="firstName" id="firstName">
                             </fieldset>
                             <fieldset class="">
-                                <h5 class="fw-bold">City</h5>
-                                <input class="form-control" type="text" name="City" id="City">
+                                <label class="fw-bold p-2 fs-4">City</label>
+                                <input class="form-control p-2" type="text" name="City" id="City">
                             </fieldset>
                             <fieldset>
-                                <label class="fw-bold p-2">We accept:</label>
-                                <div class="border rounded bg-secondary col-5">
-                                    <input type="radio" name="card_pay" id="card_pay" value="masterCard">
-                                    <img src="./static/img/mastercard-svgrepo-com.svg">
-                                    <input type="radio" name="card_pay" id="card_pay" value="visaCard">
-                                    <img src="./static/img/visa-svgrepo-com.svg">
-                                    <input type="radio" name="card_pay" id="card_pay" value="dinersCard">
-                                    <img src="./static/img/diners_icon.svg">
-                                    <input type="radio" name="card_pay" id="card_pay" value="americanCard">
-                                    <img src="./static/img/amex-svgrepo-com.svg">
+                                <label class="fw-bold p-2 fs-4">We accept:</label>
+                                <div class="border rounded bg-secondary col-7 p-2">
+                                    <input class="ms-3  p-2" type="radio" name="card_pay" id="card_pay" value="masterCard" class="bg-white" checked>
+                                    <img src="./static/img/mastercard-svgrepo-com.svg" alt="Logo" width="35" height="30" class="d-inline-block align-text-central bg-white">
+                                    <input class="ms-4" type="radio" name="card_pay" id="card_pay" value="visaCard">
+                                    <img src="./static/img/visa-svgrepo-com.svg" alt="Logo" width="35" height="30" class="d-inline-block align-text-central bg-white">
+                                    <input class="ms-4" type="radio" name="card_pay" id="card_pay" value="dinersCard">
+                                    <img src="./static/img/diners_icon.svg" alt="Logo" width="35" height="30" class="d-inline-block align-text-central bg-white">
+                                    <input class="ms-4" type="radio" name="card_pay" id="card_pay" value="americanCard">
+                                    <img src="./static/img/amex-svgrepo-com.svg" alt="Logo" width="35" height="30" class="d-inline-block align-text-central bg-white">
                                 </div>                               
                             </fieldset>
                         </div>    
                         <div class="col-6"> 
                             <fieldset class="">
-                                <h5 class="fw-bold">Last Name</h5>
-                                <input class="form-control" type="text" name="lastName" id="lastName">
+                                <label class="fw-bold p-2 fs-4">Last Name</label>
+                                <input class="form-control  p-2" type="text" name="lastName" id="lastName">
                             </fieldset>
                             <div class="row">
-                                <fieldset class="col-3">
-                                    <h5 class="fw-bold">State</h5>
-                                    <input class="form-control" type="text" name="state" id="state">
+                                <fieldset class="col-6">
+                                    <label class="fw-bold p-2 fs-4">State</label>
+                                    <select class="form-control  p-2" name="state" id="state">
+                                        <option>Pick a state</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>                                
+                                    </select>   
                                 </fieldset>
-                                <fieldset class="col-3">
-                                    <h5 class="fw-bold">Postal Code</h5>
+                                <fieldset class="col-6">
+                                    <label class="fw-bold p-2 fs-4">Postal Code</label>
                                     <input class="form-control" type="text" name="postal-Code" id="postal-Code">
                                 </fieldset>
                             </div>
-                            
-                            <fieldset class="">
-                                <h5 class="fw-bold">Message</h5>
-                                <input class="form-control" type="text" name="typeCard" id="typeCard">
-                            </fieldset>
+                            <fieldset>
+                                <label class="fw-bold p-2 fs-4">Message</label>
+                                <textarea class="form-control p-4" id="floatingTextarea" name="notes" id="notes"></textarea>
+                                <div class="invalid-feedback">
+                                    Add any notes here.
+                                </div>
+                            </fieldset>                            
                         </div>                
                     </div>
                     <!-- div with display:flex, para los botones -->
-                    <div class="border border-top">
+                    <div class="border border-top mt-5">
                         <div class="row justify-content-end py-3">
                             <div class="col-2 text-end me-4">
                                 <button type="button" class="btn btn-secondary me-1 fw-bold">Cancel</button>
