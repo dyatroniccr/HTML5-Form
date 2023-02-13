@@ -24,16 +24,16 @@
                             <p class="p-3 mb-2 text-danger-emphasis fw-bold fs-4"> Some fields are missing </p>
                         </div>
                         <!-- div with display:flex - datos de la tarjeta  -->
-                        <div class="row m-1">
-                            <fieldset class="col-4">
+                        <div class="d-flex justify-content-around row m-2">
+                            <fieldset class="col-5">
                                 <label class="fw-bold p-2 fs-4">Card #</label>                            
                                 <input class="form-control p-2" type="text" name="CardNumber" id="CardNumber" placeholder="XXXXXXXXXXXXXXXX">
                             </fieldset>
-                            <fieldset class="col-2">
+                            <fieldset class="col-3">
                                 <label class="fw-bold p-2 fs-4">CVC #</label>                                
                                 <input class="form-control p-2" type="text" name="CardNumber" id="CardNumber" placeholder="0000">
                             </fieldset>
-                            <fieldset class="col-3">
+                            <fieldset class="col-4">
                                 <label class="fw-bold p-2 fs-4">Amount</label>
                                 <div class="input-group">
                                     <label class="fw-bold fs-4">$ </label>                                               
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <!-- div with display:flex - datos del dueno de la tarjeta -->
-                    <div class="row ms-1 me-2">
+                    <div class="row ms-2 me-2">
                         <div class="col-6"> 
                             <fieldset class="">
                                 <label class="fw-bold p-2 fs-4">First Name</label>
@@ -72,7 +72,7 @@
                                 <label class="fw-bold p-2 fs-4">Last Name</label>
                                 <input class="form-control  p-2" type="text" name="lastName" id="lastName">
                             </fieldset>
-                            <div class="row">
+                            <div class="d-flex justify-content-around row">
                                 <fieldset class="col-6">
                                     <label class="fw-bold p-2 fs-4">State</label>
                                     <input class="form-control p-2" type="number" name="state" id="state" min="1" max="5" placeholder="Pick a state"> 
@@ -85,14 +85,12 @@
                             <fieldset>
                                 <label class="fw-bold p-2 fs-4">Message</label>
                                 <textarea class="form-control p-4" id="floatingTextarea" name="notes" id="notes"></textarea>
-                                <div class="invalid-feedback">
-                                    Add any notes here.
-                                </div>
+                                <p class="text-secondary-emphasis fw-bold mt-1">Add any notes here.</p> 
                             </fieldset>                            
                         </div>                
                     </div>
                     <!-- div with display:flex, para los botones -->
-                    <div class="border border-top mt-5">
+                    <div class="border border-top mt-4">
                         <div class="row justify-content-end py-3">
                             <div class="col-2 text-end me-4">
                                 <button type="button" class="btn btn-secondary me-1 fw-bold">Cancel</button>
